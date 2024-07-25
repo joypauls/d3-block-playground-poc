@@ -6,23 +6,37 @@ function BasicBlockStack() {
 
   useEffect(() => {
     if (d3ref.current) {
+      const svgWidth = 800;
+      const svgHeight = 400;
+      const data = [3, 5, 2, 4, 6]; // Different numbers of squares for each stack
+      const rectWidth = 50;
+      const rectHeight = 50;
+      const numStacks = data.length;
+      const totalRectWidth = numStacks * rectWidth;
+      const spacing = (svgWidth - totalRectWidth) / (numStacks + 1);
+
       const svg = d3
         .select(d3ref.current)
-        .attr("width", 400)
-        .attr("height", 400)
+        .attr("width", svgWidth)
+        .attr("height", svgHeight)
         .style("background-color", "#f0f0f0");
 
-      const data = [1, 2, 3, 4, 5];
-      const rectHeight = 50;
-
       svg
-        .selectAll("rect")
+        .selectAll("g")
         .data(data)
         .enter()
+        .append("g")
+        .attr(
+          "transform",
+          (d, i) => `translate(${spacing + i * (rectWidth + spacing)}, 0)`
+        )
+        .selectAll("rect")
+        .data((d) => d3.range(d))
+        .enter()
         .append("rect")
-        .attr("x", 50)
-        .attr("y", (d, i) => i * rectHeight)
-        .attr("width", 50)
+        .attr("x", 0)
+        .attr("y", (d, i) => svgHeight - (i + 1) * rectHeight)
+        .attr("width", rectWidth)
         .attr("height", rectHeight)
         .attr("fill", "steelblue")
         .attr("stroke", "black")

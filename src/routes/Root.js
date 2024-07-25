@@ -8,14 +8,12 @@ function Root() {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Three.js Playground
+            D3.js Block Playground
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/sandbox">
               Sandbox
             </Nav.Link>
-            <Nav.Link href="#features">Stack</Nav.Link>
-            <Nav.Link href="#pricing">Gravity Stack</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
