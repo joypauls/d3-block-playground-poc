@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Root from "./routes/Root";
 import Sandbox from "./routes/Sandbox";
-import BasicBlockStack from "./d3/BasicBlockStack";
+import Animation from "./routes/Animation";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +12,12 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: "Sandbox",
+        path: "sandbox",
         element: <Sandbox />,
+      },
+      {
+        path: "animation",
+        element: <Animation />,
       },
     ],
   },

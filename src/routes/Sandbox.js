@@ -1,10 +1,8 @@
 import React from "react";
-import { Container, Navbar, Nav, Button } from "react-bootstrap";
-import { Outlet } from "react-router-dom";
-import BasicBlockStack from "../d3/BasicBlockStack";
+import BasicStacks from "../d3/BasicStacks";
 
-function Root() {
-  return <BasicBlockStack />;
+function Sandbox() {
+  return <BasicStacks />;
 }
 
-export default Root;
+export default Sandbox;

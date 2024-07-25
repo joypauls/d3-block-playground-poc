@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav, Button } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 
 function Root() {
@@ -13,6 +13,9 @@ function Root() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/sandbox">
               Sandbox
+            </Nav.Link>
+            <Nav.Link as={Link} to="/animation">
+              Animation
             </Nav.Link>
           </Nav>
         </Container>
