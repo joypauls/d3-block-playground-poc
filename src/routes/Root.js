@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Container, Navbar, Nav, Row } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 
 function Root() {
@@ -21,7 +21,11 @@ function Root() {
         </Container>
       </Navbar>
       <div id="content">
-        <Outlet />
+        <Container style={{ margin: "1rem" }}>
+          <Row>
+            <Outlet />
+          </Row>
+        </Container>
       </div>
     </div>
   );
