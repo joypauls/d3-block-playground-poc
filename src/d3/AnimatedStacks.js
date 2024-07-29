@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
 import { randomIntArray } from "./utils/random";
+import { indexOfMax } from "./utils/arrays";
 
 const pallette = ["#908FFF", "#FDC954", "#2FCEA2", "#F37F7D"];
 const fullPallette = pallette.concat(pallette, pallette);
@@ -31,6 +32,8 @@ function AnimatedStacks() {
 
       // generate data for the stacks (# of blocks)
       const stackSizes = randomIntArray(1, 6, numStacks);
+      // ensure at least one stack has 6 blocks
+      stackSizes[indexOfMax(stackSizes)] = 6;
       const data = stackSizes.map((d, i) => ({
         size: d,
         color: fullPallette[i],
