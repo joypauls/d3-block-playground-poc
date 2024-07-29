@@ -1,8 +1,8 @@
 import React from "react";
-import BasicStacks from "../d3/BasicStacks";
+import ContinuousAnimatedStacks from "../d3/ContinuousAnimatedStacks";
 
 function Sandbox() {
-  return <BasicStacks />;
+  return <ContinuousAnimatedStacks />;
 }
 
 export default Sandbox;
