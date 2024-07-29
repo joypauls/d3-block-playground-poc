@@ -1,8 +1,8 @@
 import React from "react";
-import ContinuousAnimatedStacks from "../d3/ContinuousAnimatedStacks";
+import HoverableGrid from "../d3/HoverableGrid";
 
 function Sandbox() {
-  return <ContinuousAnimatedStacks />;
+  return <HoverableGrid />;
 }
 
 export default Sandbox;
