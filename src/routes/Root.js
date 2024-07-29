@@ -1,11 +1,12 @@
 import React from "react";
-import { Container, Navbar, Nav, Row } from "react-bootstrap";
+import { Container, Navbar, Nav, Row, Button } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 
 function Root() {
   return (
     <div className="App">
-      <Navbar bg="dark" variant="dark">
+      {/* <Navbar bg="dark" variant="dark"> */}
+      <Navbar>
         <Container>
           <Navbar.Brand as={Link} to="/">
             D3.js Block Playground
@@ -17,7 +18,11 @@ function Root() {
             <Nav.Link as={Link} to="/animation">
               Animation
             </Nav.Link>
+            <Nav.Link as={Link} to="/game">
+              Game
+            </Nav.Link>
           </Nav>
+          <Button variant="primary">Play</Button>
         </Container>
       </Navbar>
       <div id="content">

@@ -5,6 +5,7 @@ import "./App.css";
 import Root from "./routes/Root";
 import Sandbox from "./routes/Sandbox";
 import Animation from "./routes/Animation";
+import Game from "./routes/Game";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "animation",
         element: <Animation />,
+      },
+      {
+        path: "game",
+        element: <Game />,
       },
     ],
   },
