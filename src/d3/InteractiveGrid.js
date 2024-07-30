@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 
-const HoverableGrid = () => {
+const InteractiveGrid = () => {
   const svgRef = useRef();
   const [gridData, setGridData] = useState([]);
   const numRows = 5;
@@ -46,7 +46,7 @@ const HoverableGrid = () => {
         .attr("stroke", "black")
         .attr("stroke-width", 1)
         .on("mouseover", function (event, d) {
-          if (d.visible) d3.select(this).attr("fill", "orange");
+          if (d.visible) d3.select(this).attr("fill", "#FDC954");
         })
         .on("mouseout", function (event, d) {
           if (d.visible) d3.select(this).attr("fill", "lightblue");
@@ -89,7 +89,11 @@ const HoverableGrid = () => {
     });
   }, [gridData]);
 
-  return <svg ref={svgRef} style={{ backgroundColor: "lightgray" }}></svg>;
+  return (
+    <div>
+      <svg ref={svgRef} style={{ backgroundColor: "#f3f3f3" }}></svg>
+    </div>
+  );
 };
 
-export default HoverableGrid;
+export default InteractiveGrid;

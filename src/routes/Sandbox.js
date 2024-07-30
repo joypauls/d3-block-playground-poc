@@ -1,8 +1,8 @@
 import React from "react";
-import HoverableGrid from "../d3/HoverableGrid";
+import InteractiveGrid from "../d3/InteractiveGrid";
 
 function Sandbox() {
-  return <HoverableGrid />;
+  return <InteractiveGrid />;
 }
 
 export default Sandbox;

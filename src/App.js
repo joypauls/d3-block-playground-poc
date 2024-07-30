@@ -6,12 +6,14 @@ import Root from "./routes/Root";
 import Sandbox from "./routes/Sandbox";
 import Animation from "./routes/Animation";
 import Game from "./routes/Game";
+import Index from "./routes/index";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
+      { index: true, element: <Index /> },
       {
         path: "sandbox",
         element: <Sandbox />,
