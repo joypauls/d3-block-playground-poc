@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Navbar, Nav, Row, Button } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 
-function Root() {
+export default function Root() {
   return (
     <div className="App">
       {/* <Navbar bg="dark" variant="dark"> */}
@@ -35,5 +35,3 @@ function Root() {
     </div>
   );
 }
-
-export default Root;

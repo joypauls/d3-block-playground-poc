@@ -6,7 +6,7 @@ import { indexOfMax } from "./utils/arrays";
 const pallette = ["#908FFF", "#FDC954", "#2FCEA2", "#F37F7D"];
 const fullPallette = pallette.concat(pallette, pallette);
 
-function AnimatedStacks() {
+const AnimatedStacks = () => {
   const d3ref = useRef(null);
 
   useEffect(() => {
@@ -76,6 +76,6 @@ function AnimatedStacks() {
       <svg ref={d3ref}></svg>
     </div>
   );
-}
+};
 
 export default AnimatedStacks;

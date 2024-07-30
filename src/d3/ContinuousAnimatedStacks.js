@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 
-function ContinuousAnimatedStacks() {
+const ContinuousAnimatedStacks = () => {
   const d3Container = useRef(null);
   const [data, setData] = useState([
     { count: 3, color: "steelblue" },
@@ -102,6 +102,6 @@ function ContinuousAnimatedStacks() {
       <svg ref={d3Container}></svg>
     </div>
   );
-}
+};
 
 export default ContinuousAnimatedStacks;
